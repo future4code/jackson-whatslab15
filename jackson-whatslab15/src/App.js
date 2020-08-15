@@ -71,21 +71,10 @@ class App extends React.Components {
       <input type="text" placeholder="Mensagem" onChange="this.onChangeinputTextoMensagem" value="this.inputTextoMensagem"/>
           <button onClick="">Enviar</button>
 
-
-      
-
-
-
-
-    </div>
+      </div>
 
     );
-  }
-  
-
-
-  
+  } 
 }
 
 export default App;
-
