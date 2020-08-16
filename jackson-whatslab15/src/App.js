@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+
 const Container =  styled.div`
 display:flex;
 height:90vh;
@@ -35,12 +36,7 @@ class App extends React.Component {
 
     valorMensagem: [
 
-      // {
-      //   nomeUsuario:"",
-      //   textoMensagem:""
-      // },
-      
-    ],
+     ],
 
         inputNomeUsuario:"",
         inputTextoMensagem:""
@@ -48,8 +44,6 @@ class App extends React.Component {
 
  novamensagem =() =>{
 
-
-  console.log("ola mundo")
 
   const valores = {
 
@@ -71,24 +65,20 @@ class App extends React.Component {
   onChangeinputTextoMensagem = (event) =>{ 
     this.setState({inputTextoMensagem: event.target.value});
   }
-
-
+  
   render(){
 
     const mensagens = this.state.valorMensagem.map((valorMensagem) =>{
 
       return(
 
-        <div>
-          <p>
-          <span><Bold>{valorMensagem.nomeUsuario}</Bold></span>
-          <span>{": " + valorMensagem.textoMensagem}</span>
-          </p>
-        </div>
-
-      
-
-      )
+          <div>
+            <p>
+              <span><Bold>{valorMensagem.nomeUsuario}</Bold></span>
+              <span>{": " + valorMensagem.textoMensagem}</span>
+            </p>
+          </div>
+        )
 
      })
      
@@ -98,22 +88,17 @@ class App extends React.Component {
         <div>
           <Mensagens><div>{mensagens}</div></Mensagens>
             <input 
-            type="text" placeholder={"Usuário"} onChange={this.onChangeinputNomeUsuario}
-             
-      
-            />
+            type="text" placeholder={"Usuário"} onChange={this.onChangeinputNomeUsuario}/>
 
-            <input type="text" placeholder={"Mensagem"} onChange={this.onChangeinputTextoMensagem } value={this.state.inputTextoMensagem}
-      
-            />
+            <input type="text" placeholder={"Mensagem"} onChange={this.onChangeinputTextoMensagem } 
+            value={this.state.inputTextoMensagem}/>
 
           <button onClick={this.novamensagem}>Enviar</button>
   
         </div>
       </Container>
     </ContainerMensagens> 
-    
-    );
+   );
   }  
 }
 
