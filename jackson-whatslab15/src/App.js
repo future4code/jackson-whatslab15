@@ -3,17 +3,16 @@ import './App.css';
 // import styled from 'styled-components'
 
 
+class App extends React.Component {
 
-class App extends React.Components {
 
-
-  state= {
+  state = {
 
     valorMensagem: [
 
       {
-        nomeUsuario:"olivia",
-        textoMensagem:"oioioi"
+        nomeUsuario:"",
+        textoMensagem:""
       },
       
     ],
@@ -23,6 +22,8 @@ class App extends React.Components {
   };
 
  novamensagem =() =>{
+
+ 	console.log("ola mundo")
 
   const valores = {
 
@@ -58,33 +59,35 @@ class App extends React.Components {
           <span>{valorMensagem.textoMensagem}</span>
         </div>
 
-        )
+      
 
-    }) 
+      )
 
+     })
+     
     return (
 
     <div>
 
       <input 
-      type="text" placeholder="Usuário" onChange="this.onChangeinputNomeUsuario" value="this.inputNomeUsuario"/>
-      <input type="text" placeholder="Mensagem" onChange="this.onChangeinputTextoMensagem" value="this.inputTextoMensagem"/>
-          <button onClick="">Enviar</button>
-
-
+      type="text" placeholder={"Usuário"} onChange={this.onChangeinputNomeUsuario} 
       
+      />
 
+      <input type="text" placeholder={"Mensagem"} onChange={this.onChangeinputTextoMensagem} 
+      
+      />
 
-
+          <button onClick={this.novamensagem}>Enviar</button>
+	
+	<div>{mensagens}</div>
 
     </div>
 
+    
+    
     );
-  }
-  
-
-
-  
+  }  
 }
 
 export default App;
