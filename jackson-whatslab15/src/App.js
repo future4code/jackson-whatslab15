@@ -70,6 +70,7 @@ class App extends React.Component {
     <div>
 
       <input 
+<<<<<<< HEAD
       type="text" placeholder={"Usuário"} onChange={this.onChangeinputNomeUsuario} 
       
       />
@@ -83,12 +84,22 @@ class App extends React.Component {
 	<div>{mensagens}</div>
 
     </div>
+=======
+      type="text" placeholder="Usuário" onChange="this.onChangeinputNomeUsuario" value="this.inputNomeUsuario"/>
+      <input type="text" placeholder="Mensagem" onChange="this.onChangeinputTextoMensagem" value="this.inputTextoMensagem"/>
+          <button onClick="">Enviar</button>
+
+      </div>
+>>>>>>> 6e2ec14d015659e97c2e6acc7bec7059b4591f21
 
     
     
     );
+<<<<<<< HEAD
   }  
+=======
+  } 
+>>>>>>> 6e2ec14d015659e97c2e6acc7bec7059b4591f21
 }
 
 export default App;
-
