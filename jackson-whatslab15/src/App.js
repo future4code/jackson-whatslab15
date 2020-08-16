@@ -39,11 +39,12 @@ class App extends React.Component {
       //   nomeUsuario:"",
       //   textoMensagem:""
       // },
-      
+
     ],
 
         inputNomeUsuario:"",
-        inputTextoMensagem:""
+        inputTextoMensagem:"",
+        inputPressKey:""
   };
 
  novamensagem =() =>{
@@ -57,7 +58,7 @@ class App extends React.Component {
     textoMensagem: this.state.inputTextoMensagem
 
   };
-  
+
 
   const novosValores = [...this.state.valorMensagem, valores];
 
@@ -72,8 +73,7 @@ class App extends React.Component {
     this.setState({inputTextoMensagem: event.target.value});
   }
 
-
-  render(){
+    render(){
 
     const mensagens = this.state.valorMensagem.map((valorMensagem) =>{
 
@@ -85,9 +85,6 @@ class App extends React.Component {
           <span>{": " + valorMensagem.textoMensagem}</span>
           </p>
         </div>
-
-      
-
       )
 
      })
@@ -103,9 +100,10 @@ class App extends React.Component {
       
             />
 
-            <input type="text" placeholder={"Mensagem"} onChange={this.onChangeinputTextoMensagem } value={this.state.inputTextoMensagem}
-      
+            <input type="text" placeholder={"Mensagem"} onChange={this.onChangeinputTextoMensagem } value={this.state.inputTextoMensagem} onKeyPress={this.keyPressed}
+              
             />
+            <output>{this.state.value}</output>
 
           <button onClick={this.novamensagem}>Enviar</button>
   
